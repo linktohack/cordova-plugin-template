@@ -12,6 +12,8 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.preference.PreferenceManager
+
 import android.util.Log;
 
 import java.util.Date;
@@ -32,6 +34,11 @@ public class MyCordovaPlugin extends CordovaPlugin {
       Log.d(TAG, phrase);
     } else if(action.equals("getDate")) {
       // An example of returning data back to the web layer
+      final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
+      callbackContext.sendPluginResult(result);
+    } else if(action.equals("clearDefault")) {
+      // An example of returning data back to the web layer
+      PreferenceManager.getDefaultSharedPreferences(context).edit().clear().commit();
       final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
       callbackContext.sendPluginResult(result);
     }

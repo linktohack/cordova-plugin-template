@@ -9,6 +9,9 @@ var MyCordovaPlugin = {
   },
   getDate: function(cb) {
     exec(cb, null, PLUGIN_NAME, 'getDate', []);
+  },
+  clearDefault: function(cb) {
+    exec(cb, null, PLUGIN_NAME, 'clearDefault', []);
   }
 };
 
