@@ -12,7 +12,7 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import android.preference.PreferenceManager
+import android.preference.PreferenceManager;
 
 import android.util.Log;
 
